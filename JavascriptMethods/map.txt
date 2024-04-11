@@ -1,0 +1,62 @@
+map(); 
+
+ENG: Iterates over each element of an array and return a new array. This new array will 
+contain the elements of the first array but manipulated by a function given in the map.
+Useful when you need to transform each element of an array into something different.
+
+ESP: Itera sobre cada elemento de un array y devuelve un nuevo array con 
+los resultados de una función aplicada a cada elemento.
+Útil cuando necesitas transformar cada elemento de un array en algo diferente.
+
+TRANSFORMACIÓN DE DATOS:
+Puedes utilizar map() para transformar cada elemento de un array en 
+algo diferente. Por ejemplo, si tienes un array de números y necesitas 
+duplicar cada número, puedes usar map() para hacerlo.
+
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+// doubled = [2, 4, 6, 8]
+
+
+FORMATEO DE DATOS:
+A menudo, necesitas formatear los datos de una manera específica para su
+visualización o procesamiento. map() te permite aplicar una función de 
+formato a cada elemento de un array.
+
+const names = ["John", "Jane", "Alice"]; 
+const formattedNames = names.map(name => name.toUpperCase());
+// formattedNames = ["JOHN", "JANE", "ALICE"]
+
+RENOMBRAMIENDO DE LLAVES
+const newKeysNames = endpoint?.elements.map(
+    ({ name_key_one, name_key_two }) => ({
+      first_key: name_key_one,
+      second_key: name_key_two,
+    }),
+  );
+// newKeysNames = [first_key, second_key]
+
+EXTRACCIÓN DE PROPIEDADES:
+Cuando trabajas con objetos dentro de un array, puedes usar map() para
+extraer ciertas propiedades de esos objetos y formar un nuevo array
+con esas propiedades.
+
+const users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Jane" },
+  { id: 3, name: "Alice" }
+];
+const userIds = users.map(user => user.id);
+// userIds = [1, 2, 3]
+
+
+GENERACIÓN DE CONTENIDO DINÁMICO:
+En aplicaciones web, a menudo necesitas generar contenido dinámico 
+basado en datos. map() te permite generar elementos de manera 
+dinámica a partir de un array de datos.
+
+const items = ["Apple", "Banana", "Orange"];
+const itemList = items.map(item => `<li>${item}</li>`);
+// itemList = ["<li>Apple</li>", "<li>Banana</li>", "<li>Orange</li>"]
+
+En general, map() es una herramienta versátil que te permite realizar transformaciones en los datos de un array de una manera concisa y legible.
